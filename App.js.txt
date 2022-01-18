@@ -1,0 +1,17 @@
+import React, { useState } from "react";
+import data from "./data";
+import One from "./One";
+const App = () => {
+  const [question, setQuestion] = useState(data);
+  return (
+    <div>
+      <h2>Question and Answers</h2>
+      <div>
+        {question.map((question) => {
+          return <One key={question.id} {...question} />;
+        })}
+      </div>
+    </div>
+  );
+};
+export default App;

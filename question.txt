@@ -1,0 +1,15 @@
+import React,{useState} from "react";
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+const One = ({ title, info }) => {
+  const[show ,setShow]=useState(false);
+  return (
+    <div>
+      <div>
+      <h4>{title}</h4>
+<button onClick={()=>setShow(!show)}>{show?<AiOutlineMinus />:<AiOutlinePlus />}</button></div>
+     {show && <p1>{info}</p1>}
+    </div>
+    
+  );
+};
+export default One;
